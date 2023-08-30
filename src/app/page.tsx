@@ -1,9 +1,7 @@
-import { ModeToggle } from "@/components/botoes/modeToggle";
-
 export default function Home() {
   return (
     <main>
-      <ModeToggle />
+      <div>conteudo top</div>
     </main>
   );
 }
