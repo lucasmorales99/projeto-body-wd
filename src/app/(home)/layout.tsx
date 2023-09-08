@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import NavBar from "@/components/layout/navBar";
+import { homeNavBarItems } from "@/lib/itens";
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,7 +10,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <NavBar />
+      <NavBar title={"Portfolio"} menuItens={homeNavBarItems} />
       <main>{children}</main>
     </>
   );
