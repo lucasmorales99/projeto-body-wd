@@ -1,6 +1,6 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "@/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { AspectRatio } from "@/ui/aspect-ratio";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 
 interface CardProjetoProps {
