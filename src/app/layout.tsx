@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 
 import "@/app/globals.css";
-import NavBar from "@/components/layout/navBar";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const robotoFlex = Roboto_Flex({ subsets: ["latin"] });
@@ -22,7 +21,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body className={robotoFlex.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NavBar />
           {children}
         </ThemeProvider>
       </body>
