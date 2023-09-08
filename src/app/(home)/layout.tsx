@@ -11,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <NavBar title={"Portfolio"} menuItens={homeNavBarItems} />
-      <main>{children}</main>
+      {children}
     </>
   );
 }
