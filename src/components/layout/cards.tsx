@@ -1,12 +1,6 @@
 import CardProjeto from "@/components/layout/cardProjeto";
+import { Card } from "@/lib/interfaces";
 
-export interface Card {
-  id: string;
-  title: string;
-  description: string;
-  imageHref: string;
-  pageHref: string;
-}
 interface CardsProps {
   cards: Card[];
 }
