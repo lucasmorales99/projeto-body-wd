@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "@/components/botoes/modeToggle";
 import { navBarItems } from "@/lib/interfaces";
+import { Separator } from "@/components/ui/separator";
 
 interface NavBarProps {
   title: ReactNode;
@@ -24,7 +25,6 @@ export default function NavBar({ title, menuItens }: NavBarProps) {
       <nav className="sticky top-0 z-50 p-4 flex justify-between border-b bg-background ">
         <h1 className="text-2xl font-bold">{title}</h1>
         <div className="flex gap-2">
-          <ModeToggle />
           <NavigationMenu>
             <NavigationMenuList>
               {menuItens.map((item) => (
@@ -38,6 +38,8 @@ export default function NavBar({ title, menuItens }: NavBarProps) {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
+          <Separator orientation="vertical" />
+          <ModeToggle />
         </div>
       </nav>
     </>
