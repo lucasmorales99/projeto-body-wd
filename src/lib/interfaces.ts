@@ -5,3 +5,9 @@ export interface Card {
   imageHref: string;
   pageHref: string;
 }
+
+export interface navBarItems {
+  id: string;
+  label: string;
+  href: string;
+}

@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 
-import { Card } from "@/lib/interfaces";
+import { Card, navBarItems } from "@/lib/interfaces";
 
 export const projectsCards: Card[] = [
   {
@@ -51,5 +51,13 @@ export const projectsCards: Card[] = [
     description: "Descrição3",
     title: "Titulo3",
     pageHref: "/",
+  },
+];
+
+export const homeNavBarItems: navBarItems[] = [
+  {
+    id: v4(),
+    label: "Home",
+    href: "/",
   },
 ];
