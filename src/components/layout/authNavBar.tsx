@@ -12,8 +12,8 @@ export default function AuthNavBar() {
         return (
             <>
                 <Skeleton className="w-10 h-10 rounded-full" />
-                <div className={"px-[10px]"}>
-                    <Skeleton className="h-4 w-[65px] " />
+                <div className={"px-[16px]"}>
+                    <Skeleton className="h-4 w-[53px] " />
                 </div>
             </>
         );
@@ -26,7 +26,7 @@ export default function AuthNavBar() {
                     <AvatarImage src={`${session?.user?.image}`} alt={`User image`} />
                 </Avatar>
                 <Button variant={"ghost"} onClick={() => signOut()} className={"w-[85px]"}>
-                    Sign out
+                    Logout
                 </Button>
             </>
         );
@@ -38,7 +38,7 @@ export default function AuthNavBar() {
                 <AvatarFallback>GS</AvatarFallback>
             </Avatar>
             <Button variant={"ghost"} onClick={() => signIn("github")} className={"w-[85px]"}>
-                Sign in
+                Login
             </Button>
         </>
     );
