@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import AuthProvider from "@/components/providers/auth-provider";
 
 const robotoFlex = Roboto_Flex({ subsets: ["latin"] });
 
@@ -20,9 +21,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={robotoFlex.className}>
-                <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-                    {children}
-                </ThemeProvider>
+                <AuthProvider>
+                    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                        {children}
+                    </ThemeProvider>
+                </AuthProvider>
             </body>
         </html>
     );
