@@ -7,7 +7,7 @@ if (!process.env.GITHUB_ID || !process.env.GITHUB_SECRET) {
     throw new Error("Missing GITHUB_ID or GITHUB_SECRET env var");
 }
 
-const nextAuthOptions: AuthOptions = {
+const authOptions: AuthOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
         GithubProvider({
@@ -17,4 +17,6 @@ const nextAuthOptions: AuthOptions = {
     ],
 };
 
-export default NextAuth(nextAuthOptions);
+export const handler = NextAuth(authOptions);
+
+export { handler as GET, handler as POST };
