@@ -1,6 +1,8 @@
 "use client";
 
 import { useSession, signIn, signOut } from "next-auth/react";
+import { User } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -35,9 +37,11 @@ export default function AuthNavBar() {
     return (
         <>
             <Avatar>
-                <AvatarFallback>GS</AvatarFallback>
+                <AvatarFallback>
+                    <User />
+                </AvatarFallback>
             </Avatar>
-            <Button variant={"ghost"} onClick={() => signIn("github")} className={"w-[85px]"}>
+            <Button variant={"ghost"} onClick={() => signIn()} className={"w-[85px]"}>
                 Login
             </Button>
         </>
