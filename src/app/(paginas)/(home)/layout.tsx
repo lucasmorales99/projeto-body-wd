@@ -10,8 +10,8 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
     return (
         <>
-            <NavBar title={"Portfolio"} menuItens={homeNavBarItems} />
-            {children}
+            <NavBar isHome title={"Portfolio"} menuItens={homeNavBarItems} />
+            <main className={"main"}>{children}</main>
         </>
     );
 }
