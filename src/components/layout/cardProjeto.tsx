@@ -13,23 +13,21 @@ interface CardProjetoProps {
 
 export default function CardProjeto({ title, description, imageHref, pageHref }: CardProjetoProps) {
     return (
-        <div>
-            <Link href={pageHref}>
-                <Card>
-                    <CardHeader>
-                        <AspectRatio ratio={16 / 9} className="rounded-sm">
-                            <Image
-                                src={imageHref}
-                                alt="code"
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                                fill
-                            />
-                        </AspectRatio>
-                        <CardTitle>{title}</CardTitle>
-                        <CardDescription>{description}</CardDescription>
-                    </CardHeader>
-                </Card>
-            </Link>
-        </div>
+        <Link href={pageHref} className={"col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3"}>
+            <Card>
+                <CardHeader>
+                    <AspectRatio ratio={16 / 9} className="rounded-sm">
+                        <Image
+                            src={imageHref}
+                            alt="code"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                            fill
+                        />
+                    </AspectRatio>
+                    <CardTitle>{title}</CardTitle>
+                    <CardDescription>{description}</CardDescription>
+                </CardHeader>
+            </Card>
+        </Link>
     );
 }

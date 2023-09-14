@@ -74,3 +74,9 @@
         @apply bg-background text-foreground;
     }
 }
+
+.main {
+    @apply flex flex-col;
+    @apply gap-3 sm:gap-6 md:gap-8;
+    @apply p-3 sm:p-6 md:p-8;
+}

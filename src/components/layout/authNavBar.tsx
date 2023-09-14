@@ -12,30 +12,30 @@ export default function AuthNavBar() {
 
     if (status === "loading") {
         return (
-            <>
+            <section className={"flex gap-2"}>
                 <Skeleton className="w-10 h-10 rounded-full" />
                 <div className={"px-[16px]"}>
                     <Skeleton className="h-4 w-[53px] " />
                 </div>
-            </>
+            </section>
         );
     }
 
     if (status === "authenticated") {
         return (
-            <>
+            <section className={"flex gap-2"}>
                 <Avatar>
                     <AvatarImage src={`${session?.user?.image}`} alt={`User image`} />
                 </Avatar>
                 <Button variant={"ghost"} onClick={() => signOut()} className={"w-[85px]"}>
                     Logout
                 </Button>
-            </>
+            </section>
         );
     }
 
     return (
-        <>
+        <section className={"flex gap-2"}>
             <Avatar>
                 <AvatarFallback>
                     <User />
@@ -44,6 +44,6 @@ export default function AuthNavBar() {
             <Button variant={"ghost"} onClick={() => signIn()} className={"w-[85px]"}>
                 Login
             </Button>
-        </>
+        </section>
     );
 }
